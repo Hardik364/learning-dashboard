@@ -33,7 +33,6 @@ export default function Sidebar() {
         borderColor: "var(--border)",
       }}
     >
-      {/* Logo */}
       <div className="flex items-center gap-3 px-4 py-5 border-b" style={{ borderColor: "var(--border)" }}>
         <div
           className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
@@ -57,7 +56,6 @@ export default function Sidebar() {
         </AnimatePresence>
       </div>
 
-      {/* Nav items */}
       <nav className="flex-1 flex flex-col gap-1 p-3 mt-1">
         {navItems.map((item) => {
           const Icon = item.icon
@@ -97,7 +95,6 @@ export default function Sidebar() {
         })}
       </nav>
 
-      {/* Streak badge */}
       <div className="p-3 border-t" style={{ borderColor: "var(--border)" }}>
         <div
           className="flex items-center gap-2 px-3 py-2 rounded-lg"
@@ -120,7 +117,6 @@ export default function Sidebar() {
         </div>
       </div>
 
-      {/* Collapse toggle */}
       <button
         onClick={() => setCollapsed((c) => !c)}
         className="absolute -right-3 top-7 w-6 h-6 rounded-full border flex items-center justify-center z-20"

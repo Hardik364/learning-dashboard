@@ -54,7 +54,6 @@ export default function CourseCard({ course, index }: Props) {
         border: "1px solid var(--border)",
       }}
     >
-      {/* Hover glow border */}
       <div
         className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
         style={{ boxShadow: "inset 0 0 0 1px rgba(124,92,252,0.3)" }}

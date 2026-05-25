@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { Activity } from "lucide-react"
 
-// 12 weeks x 7 days of mock activity data
 function generateActivity() {
   const weeks = 12
   const days = 7
@@ -52,7 +51,6 @@ export default function ActivityTile() {
       </div>
 
       <div className="flex gap-1">
-        {/* Day labels */}
         <div className="flex flex-col justify-around pr-1" style={{ gap: 3 }}>
           {dayLabels.map((d) => (
             <span key={d} className="text-[10px] leading-none" style={{ color: "var(--muted)" }}>
@@ -61,7 +59,6 @@ export default function ActivityTile() {
           ))}
         </div>
 
-        {/* Grid */}
         <div className="flex gap-1 flex-1">
           {activityGrid.map((week, wi) => (
             <div key={wi} className="flex flex-col gap-1 flex-1">
@@ -90,7 +87,6 @@ export default function ActivityTile() {
         </div>
       </div>
 
-      {/* Legend */}
       <div className="flex items-center gap-1.5 self-end">
         <span className="text-[10px]" style={{ color: "var(--muted)" }}>Less</span>
         {[0, 1, 2, 3, 4].map((v) => (
