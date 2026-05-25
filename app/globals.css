@@ -1,14 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #080810;
-  --surface: #0f0f1a;
-  --surface-2: #161624;
-  --border: rgba(255, 255, 255, 0.06);
-  --text: #e8e8f0;
-  --muted: #6b6b80;
+  --bg: #06060f;
+  --surface: #0d0d1a;
+  --surface-2: #13132a;
+  --border: rgba(255, 255, 255, 0.07);
+  --text: #eaeaf5;
+  --text-secondary: #a0a0bc;
+  --muted: #55556a;
   --accent: #7c5cfc;
   --accent-2: #5c8cfc;
+  --accent-glow: rgba(124, 92, 252, 0.22);
+  --red: #fc5c5c;
+  --green: #5cfca0;
 }
 
 * {
@@ -23,7 +27,7 @@ html {
 body {
   min-height: 100vh;
   background: var(--bg);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -35,13 +39,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 2px;
 }
 
 @keyframes pulse-skeleton {
-  0%, 100% { opacity: 0.35; }
-  50% { opacity: 0.65; }
+  0%, 100% { opacity: 0.28; }
+  50% { opacity: 0.55; }
 }
 
 .skeleton {
@@ -66,5 +70,5 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
   pointer-events: none;
   animation: grain 8s steps(10) infinite;
-  opacity: 0.15;
+  opacity: 0.13;
 }

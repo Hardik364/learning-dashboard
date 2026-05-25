@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {
   LayoutDashboard,
@@ -22,6 +22,15 @@ const navItems = [
 export default function Sidebar() {
   const [collapsed, setCollapsed] = useState(false)
   const [active, setActive] = useState("Dashboard")
+
+  useEffect(() => {
+    const check = () => {
+      if (window.innerWidth < 1024) setCollapsed(true)
+    }
+    check()
+    window.addEventListener("resize", check)
+    return () => window.removeEventListener("resize", check)
+  }, [])
 
   return (
     <div className="relative hidden md:flex shrink-0 h-full">
