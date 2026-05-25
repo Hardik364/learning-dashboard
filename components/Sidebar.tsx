@@ -24,10 +24,11 @@ export default function Sidebar() {
   const [active, setActive] = useState("Dashboard")
 
   return (
+    <div className="relative hidden md:flex shrink-0 h-full">
     <motion.nav
       animate={{ width: collapsed ? 68 : 220 }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      className="relative hidden md:flex flex-col shrink-0 h-full overflow-hidden border-r"
+      className="flex flex-col h-full overflow-hidden border-r w-full"
       style={{
         background: "var(--surface)",
         borderColor: "var(--border)",
@@ -117,6 +118,8 @@ export default function Sidebar() {
         </div>
       </div>
 
+    </motion.nav>
+
       <button
         onClick={() => setCollapsed((c) => !c)}
         className="absolute -right-3 top-7 w-6 h-6 rounded-full border flex items-center justify-center z-20"
@@ -130,6 +133,6 @@ export default function Sidebar() {
           <ChevronLeft size={12} />
         </motion.span>
       </button>
-    </motion.nav>
+    </div>
   )
 }
